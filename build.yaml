@@ -14,3 +14,20 @@
 ---
 include:
   - board: preonic_rev3
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+
+  steps:
+      - name: Generate artifact name
+        id: generate-name
+        run: |
+          echo "::set-output name=artifact::${{ github.event.repository.name }}.${{ github.ref_name }}.${{ github.run_id }}.zip"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.generate-name.outputs.artifact }}
+          path: ./
