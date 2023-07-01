@@ -21,14 +21,14 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
-  steps:
-      - name: Generate artifact name
-        id: generate-name
-        run: |
-          echo "::set-output name=artifact::${{ github.event.repository.name }}.${{ github.ref_name }}.${{ github.run_id }}.zip"
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${{ steps.generate-name.outputs.artifact }}
-          path: ./
+#  steps:
+#      - name: Generate artifact name
+#        id: generate-name
+#        run: |
+#          echo "::set-output name=artifact::${{ github.event.repository.name }}.${{ github.ref_name }}.${{ github.run_id }}.zip"
+#
+#      - name: Upload artifact
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: ${{ steps.generate-name.outputs.artifact }}
+#          path: ./
