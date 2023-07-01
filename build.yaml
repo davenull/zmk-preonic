@@ -16,10 +16,10 @@ include:
   - board: preonic_rev3
 
 on: [push, pull_request, workflow_dispatch]
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+#
+#jobs:
+#  build:
+#    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
 #  steps:
 #      - name: Generate artifact name
