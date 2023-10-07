@@ -19,6 +19,30 @@
 };
 
 / {
+    behaviors {
+		// Enables holding the first mod-tap key
+		// by performing a tap-release-hold sequence.
+		// To use it: "&qt KEYCODE1 KEYCODE2"
+		qt: quick_tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "QUICK_TAP";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <190>;
+			quick-tap-ms = <185>;
+			bindings = <&kp>, <&kp>;
+		};
+        gqt: global-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            bindings = <&mo>, <&kp>;
+        };
+	};
     combos {
         compatible = "zmk,combos";
 
@@ -51,7 +75,7 @@
                 &kp TAB        &kp Q      &kp W     &kp F     &kp P         &kp G           &kp J      &kp L          &kp U       &kp Y     &kp SEMI   &kp DEL
                 &mt LCTRL ESC  &kp A      &kp R     &kp S     &lt LOWER T   &kp D           &kp H      &lt RAISE N    &lt MOVE E  &kp I     &kp O      &mt RCTRL SQT
                 &kp LSHIFT     &kp Z      &kp X     &kp C     &kp V         &kp B           &kp K      &kp M          &kp COMMA   &kp DOT   &kp SLASH  &mt RSHIFT RET
-                &none          &kp LCTRL  &kp LALT  &kp LGUI  &kp ESC       &mt LOWER BSPC  &kp SPACE  &mt LGUI TAB   &kp LEFT    &kp DOWN  &kp UP     &kp RIGHT
+                &none          &kp LCTRL  &kp LALT  &kp LGUI  &kp ESC       &gqt LOWER BSPC  &kp SPACE  &mt LGUI TAB   &kp LEFT    &kp DOWN  &kp UP     &kp RIGHT
                 >;
         };
         lower {
