@@ -50,6 +50,7 @@
 			timeout-ms = <200>;
 			key-positions = <32 33>;
 			bindings = <&kp LGUI>;
+            require-prior-idle-ms = <100>;
 			layers = <DEFAULT>;
 		};
 
@@ -57,6 +58,7 @@
 			timeout-ms = <200>;
 			key-positions = <27 28>;
 			bindings = <&kp LC(SPACE)>;
+            require-prior-idle-ms = <100>;
 			layers = <DEFAULT>;
 		};
     };
