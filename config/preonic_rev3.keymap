@@ -13,6 +13,11 @@
 #define RAISE   2
 #define MOVE    3
 
+&sk {
+	// don't release mods on other mods presses
+	ignore-modifiers;
+};
+
 / {
     combos {
         combo_cmd_mac{
