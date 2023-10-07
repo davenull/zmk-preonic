@@ -19,7 +19,7 @@
 			timeout-ms = <200>;
 			key-positions = <33 34>;
 			bindings = <&kp LGUI>;
-			layers = <BASE>;
+			layers = <DEFAULT>;
 		};
     };
     chosen { zmk,matrix_transform = &layout_grid_transform; };
