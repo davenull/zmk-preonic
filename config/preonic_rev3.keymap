@@ -42,16 +42,16 @@
         default_layer {
             //  -------------------------------------------------------------------------------------------------
             // |  GRAV |  1   |  2   |  3   |  4    |  5     |   6     |  7     |  8   |  9    |   0   | BSPC   |
-            // |  TAB  |  Q   |  W   |  E   |  R    |  T     |   Y     |  U     |  I   |  O    |   P   | DEL    |
-            // |  ESC  |  A   |  S   |  D   |  F    |  G     |   H     |  J     |  K   |  L    |   ;   |  '     |
-            // | SHIFT |  Z   |  X   |  C   |  V    |  B     |   N     |  M     |  ,   |  .    |   /   | RET    |
+            // |  TAB  |  Q   |  W   |  F   |  P    |  G     |   J     |  L     |  U   |  Y    |   :   | DEL    |
+            // |  ESC  |  A   |  R   |  S   |  T    |  D     |   H     |  N     |  E   |  I    |   O   |  '     |
+            // | SHIFT |  Z   |  X   |  C   |  V    |  B     |   K     |  M     |  ,   |  .    |   /   | RET    |
             // |       | LGUI | LALT | LCTL | LOWER | SPACE  |  SPACE  |  RAISE | LEFT |  DOWN |   UP  | RIGHT  |
             bindings = <
-                &kp GRAVE   &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
-                &kp TAB     &kp Q      &kp W     &kp F     &kp P      &kp G      &kp J      &kp L      &kp U      &kp Y     &kp SEMI      &kp DEL
-                &kp ESC     &kp A      &kp R     &kp S     &kp T      &kp D      &kp H      &kp N      &lt MOVE E      &kp I     &kp O   &kp SQT
-                &kp LSHIFT  &kp Z      &kp X     &kp C     &kp V      &kp B      &kp K      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &mt RSHIFT RET
-                &none       &kp LCTRL  &kp LALT  &kp LGUI  &mo LOWER  &kp BSPC  &kp SPACE  &mo RAISE  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT
+                &kp GRAVE      &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &kp BSPC
+                &kp TAB        &kp Q      &kp W     &kp F     &kp P      &kp G      &kp J      &kp L      &kp U      &kp Y     &kp SEMI      &kp DEL
+                &mt LCTRL ESC  &kp A      &kp R     &kp S     &kp T      &kp D      &kp H      &kp N      &lt MOVE E      &kp I     &mt RCTRL O   &kp SQT
+                &kp LSHIFT     &kp Z      &kp X     &kp C     &kp V      &kp B      &kp K      &kp M      &kp COMMA  &kp DOT   &kp SLASH  &mt RSHIFT RET
+                &none          &kp LCTRL  &kp LALT  &kp LGUI  &mo LOWER  &kp BSPC  &kp SPACE  &mo RAISE  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT
                 >;
         };
         lower {
