@@ -14,7 +14,14 @@
 #define MOVE    3
 
 / {
-    combos 
+    combos {
+        combo_cmd_mac{
+			timeout-ms = <200>;
+			key-positions = <33 34>;
+			bindings = <&kp LGUI>;
+			layers = <BASE>;
+		};
+    };
     chosen { zmk,matrix_transform = &layout_grid_transform; };
     keymap {
         compatible = "zmk,keymap";
@@ -67,7 +74,7 @@
             // -------------------------------------------------------------------------------------------
             // |   `   |  1   |  2   |  3   |  4   |   5   |   6   |   7   |   8  |  9   |   0   | BSPC  |
             // |   `   |  1   |  2   |  3   |  4   |   5   |   6   |   7   |   8  |  9   |   0   | DEL   |
-            // |  DEL  |  F1  |  F2  |  F3  |  F4  |  F5   |  F6   |   -   |   =  |  [   |   ]   |  \    |
+            // |  DEL  | left |  F2  |  F3  |  F4  |  F5   |  F6   |   -   |   =  |  [   |   ]   |  \    |
             // |       |  F7  |  F8  |  F9  |  F10 |  F11  |  F12  |   #   |   \  | PGUP |  PGDN |       |
             // |       |      |      |      |      | SHIFT |       |       | NEXT | VOL- |  VOL+ | PLAY  |
             bindings = <
