@@ -92,7 +92,7 @@
                 &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &none           &kp UNDERSCORE  &kp PIPE     &kp SQT        &none        &kp DEL
                 &kp DEL        &kp CARET   &kp STAR    &kp AMPS    &none       &none       &kp HASH        &kp MINUS       &kp SLASH    &kp DQT        &kp DOLLAR    &kp BSLH
                 &none          &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12         &kp TILDE       &kp BSLH     &kp GRAVE      &none         &none
-                &kp LALT       &none       &none       &none       &trans      &none       &kp RET         &none           &kp C_NEXT   &kp C_VOL_UP   &kp C_VOL_UP  &kp C_PLAY
+                &kp LALT       &none       &none       &none       &trans      &none       &kp RET         &none           &kp C_NEXT   &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PLAY
                 >;
         };
         raise {
